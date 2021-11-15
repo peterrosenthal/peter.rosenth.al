@@ -1,8 +1,21 @@
+<script>
+  import Nav from '/src/components/Nav.svelte';
+</script>
+
 <style>
+  main {
+    widows: 100%;
+    height: 85vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
   h1 {
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
-    width: 80%;
+    width: 85%;
     max-width: 28em;
     font-family: 'Lato', sans-serif;
   }
@@ -30,8 +43,11 @@
   <title>Peter Rosenthal</title>
 </svelte:head>
 
-<h1>
-  <div id='prelude'>Hello, I'm</div>
-  <img src='logo.png' alt='Peter Rosenthal'>
-  <div id='postlude'>a creative everything developer!</div>
-</h1>
+<main>
+  <h1>
+    <div id='prelude'>Hello, I'm</div>
+    <img src='logo.png' alt='Peter Rosenthal'>
+    <div id='postlude'>a creative everything developer!</div>
+  </h1>
+  <Nav home={false} />
+</main>
