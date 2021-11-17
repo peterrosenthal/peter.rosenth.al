@@ -1,5 +1,5 @@
 <script>
-  import Nav from '/src/components/Nav.svelte';
+  import Nav from '$components/Nav.svelte';
 </script>
 
 <style>
@@ -46,7 +46,7 @@
 <main>
   <h1>
     <div id='prelude'>Hello, I'm</div>
-    <img src='logo.png' alt='Peter Rosenthal'>
+    <img src='/logo.svg' alt='Peter Rosenthal'>
     <div id='postlude'>a creative everything developer!</div>
   </h1>
   <Nav home={false} />

@@ -56,7 +56,7 @@
 
 <nav>
   {#if home}
-    <a id='home' href='/'><img src='../logo.png' alt='Home'></a>
+    <a id='home' href='/'><img src='/logo.svg' alt='Home'></a>
   {/if}
   <a id='portfolio' href='/portfolio'>Projects</a>
   <a id='me' href='/me'>About me</a>
