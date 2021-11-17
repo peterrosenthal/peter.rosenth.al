@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import adapter from '@sveltejs/adapter-static';
+import vercel from '@sveltejs/adapter-vercel';
 
 const { kitprops } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 const dev = process.env.NODE_ENV === 'development';
@@ -14,8 +14,8 @@ const config = {
 		target: '#svelte',
 		// set base path for deployment
 		paths: { base },
-		// static adapter for deployment
-		adapter: adapter(),
+		// vercel adapter for deployment
+		adapter: vercel(),
 		// config for path aliases
 		vite: {
 			resolve: {
