@@ -1,5 +1,5 @@
 <script context='module'>
-  import * as archieml from 'archieml';
+  import { load as loadAML } from 'archieml';
 
   export async function load({ page, fetch, session, stuff }) {
     const slug = page.params.slug;
@@ -8,13 +8,13 @@
 
     if (entriesResponse.ok) {
       const entriesResponseText = await entriesResponse.text();
-      const entries = archieml.load(entriesResponseText);
+      const entries = loadAML(entriesResponseText);
       if (entries[slug] !== undefined) {
         const entryUrl = `https://docs.google.com/document/d/${entries[slug]}/export?format=txt`;
         const entryResponse = await fetch(entryUrl);
         if (entryResponse.ok) {
           const entryResponseText = await entryResponse.text();
-          const entry = archieml.load(entryResponseText);
+          const entry = loadAML(entryResponseText);
           return { props: { contents: entry } };
         }
         return {
