@@ -1,27 +1,11 @@
-<script context='module'>
-  export async function load({ page, fetch }) {
-    const url = 'entries.json';
-    const response = await fetch(url);
-    if (response.ok) {
-      const text = response.text();
-      return { props: { text } };
-    }
-    return { 
-      status: response.status,
-      error: new Error(`Could not load url: ${url}`),
-    };
-  }
-</script>
-
 <script>
-  export let projects = [];
-  export let text = '';
+  import portfolio from '$data/portfolio.json';
+
+  export let projects = portfolio;
 </script>
 
 <ul>
   {#each projects as project}
-    <li>{project.title}<img src={project.thumbnail.url} alt={project.thumbnail.alt} /></li>
+    <li>{project.entry.title}<img src={project.entry.thumbnail.url} alt={project.entry.thumbnail.alt} /></li>
   {/each}
 </ul>
-
-{text}

@@ -8,10 +8,9 @@ function getUrl(id) {
   return `https://docs.google.com/document/d/${id}/export?format=txt`;
 }
 
-async function fetchList(parent) {
+async function fetchList() {
   console.log(`fetching list of portfolio entries`);
   const list = [];
-  const files = [];
   const id = '1ClXruC-rmLh2iCEpRHa1kG_6X4FSh935Zo6nCDPuWCI';
   const url = getUrl(id);
   try {
@@ -20,45 +19,44 @@ async function fetchList(parent) {
     const parsed = archieml.load(text);
     for (let slug in parsed) {
       list.push({ slug, id: parsed[slug] });
-      files.push(`${slug}.json`);
     }
-    const json = JSON.stringify(files);
-    const file = `${parent}/entries.json`;
-    fs.writeFileSync(file, json);
-    console.log(`list of portfolio entries retrieved and written to ${file}`);
+    console.log(`list of portfolio entries retrieved`);
   } catch (error) {
     throw new Error(error);
   }
   return list;
 }
 
-async function fetchEntry({ slug, id }, parent) {
+async function fetchEntry({ slug, id }) {
   console.log(`fetching ${slug} portfolio entry`);
   const url = getUrl(id);
   try {
     const response = await fetch(url);
     const text = await response.text();
-    const parsed = archieml.load(text);
-    const json = JSON.stringify(parsed);
-    const file = `${parent}/${slug}.json`;
-    fs.writeFileSync(file, json);
-    console.log(`${slug} retrieved and written to ${file}`);
+    const entry = archieml.load(text);
+    console.log(`${slug} retrieved`);
+    return { slug, entry };
   } catch (error) {
     throw new Error(error);
   }
 }
 
 (async function(){
-  const parent = `${CWD}/src/routes/portfolio`;
+  const entries = await fetchList();
+  const list = [];
+  for (let entry of entries) {
+    list.push(await fetchEntry(entry));
+  }
+  const parent = `${CWD}/src/data`;
+  const file = `${parent}/portfolio.json`;
+  const json = JSON.stringify(list);
   try {
     if (!fs.existsSync(parent)) {
       fs.mkdirSync(parent, { recursive: true });
     }
+    fs.writeFileSync(file, json);
+    console.log(`all portfolio entries retrieved and written to ${file}`);
   } catch (error) {
     throw new Error(error);
-  }
-  const entries = await fetchList(parent);
-  for (let entry of entries) {
-    fetchEntry(entry, parent);
   }
 })();

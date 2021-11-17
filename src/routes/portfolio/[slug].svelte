@@ -1,42 +1,22 @@
 <script context='module'>
-  import { load as loadAML } from 'archieml';
+  import portfolio from '$data/portfolio.json';
 
-  export async function load({ page, fetch, session, stuff }) {
+  export async function load({ page }) {
     const slug = page.params.slug;
-    const entriesUrl = 'https://docs.google.com/document/d/1ClXruC-rmLh2iCEpRHa1kG_6X4FSh935Zo6nCDPuWCI/export?format=txt';
-    const entriesResponse = await fetch(entriesUrl);
-
-    if (entriesResponse.ok) {
-      const entriesResponseText = await entriesResponse.text();
-      const entries = loadAML(entriesResponseText);
-      if (entries[slug] !== undefined) {
-        const entryUrl = `https://docs.google.com/document/d/${entries[slug]}/export?format=txt`;
-        const entryResponse = await fetch(entryUrl);
-        if (entryResponse.ok) {
-          const entryResponseText = await entryResponse.text();
-          const entry = loadAML(entryResponseText);
-          return { props: { contents: entry } };
-        }
-        return {
-          status: entryResponse.status,
-          error: new Error(`could not load url: ${entryUrl}`),
-        };
-      } else {
-        return {
-          status: 404,
-          error: new Error(`Project not found: ${slug}`),
-        };
+    for (let item of portfolio) {
+      if (item.slug === slug) {
+        return { props: { entry: item.entry } }
       }
     }
-    return { 
-      status: entriesResponse.status,
-      error: new Error(`Could not load url: ${entryiesUrl}`),
+    return {
+      status: 404,
+      error: new Error(`Project not found: ${slug}`),
     };
   }
 </script>
 
 <script>
-  export let contents = {
+  export let entry = {
     title: 'Default Entry Title',
     contents: [
       {
@@ -56,13 +36,13 @@
   };
 </script>
 
-<h1>{contents.title}</h1>
-{#each contents.contents as entry}
-  {#if entry.type == 'image'}
-    <img src={entry.url} alt={entry.alt} />
-  {:else if entry.type == 'subheading'}
-    <h2>{entry.text}</h2>
-  {:else if entry.type == 'paragraph'}
-    <p>{entry.text}</p>
+<h1>{entry.title}</h1>
+{#each entry.contents as item}
+  {#if item.type === 'image'}
+    <img src={item.url} alt={item.alt} />
+  {:else if item.type === 'subheading'}
+    <h2>{item.text}</h2>
+  {:else if item.type === 'paragraph'}
+    <p>{item.text}</p>
   {/if}
 {/each}
