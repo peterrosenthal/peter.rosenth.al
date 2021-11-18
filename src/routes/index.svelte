@@ -4,6 +4,7 @@
 
 <style>
   main {
+    margin-top: 1em;
     width: 100%;
     height: 85vh;
     display: flex;
@@ -13,7 +14,7 @@
   }
 
   h1 {
-    margin: 1em 0;
+    margin: 0;
     text-align: center;
     width: 85%;
     max-width: 28em;
