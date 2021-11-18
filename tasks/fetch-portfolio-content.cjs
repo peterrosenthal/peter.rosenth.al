@@ -9,7 +9,7 @@ function getUrl(id) {
 }
 
 async function fetchList() {
-  console.log(`fetching list of portfolio entries`);
+  console.log('fetching list of portfolio entries from google docs');
   const list = [];
   const id = '1ClXruC-rmLh2iCEpRHa1kG_6X4FSh935Zo6nCDPuWCI';
   const url = getUrl(id);
@@ -20,7 +20,7 @@ async function fetchList() {
     for (let slug in parsed) {
       list.push({ slug, id: parsed[slug] });
     }
-    console.log(`list of portfolio entries retrieved`);
+    console.log('list of portfolio entries retrieved');
   } catch (error) {
     throw new Error(error);
   }
@@ -41,7 +41,7 @@ async function fetchEntry({ slug, id }) {
   }
 }
 
-(async function(){
+(async function() {
   const entries = await fetchList();
   const list = [];
   for (let entry of entries) {

@@ -6,7 +6,8 @@
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "eslint --ignore-path .gitignore .",
-    "portfolio": "node tasks/fetch-portfolio-content.cjs"
+    "fetch-portfolio": "node tasks/fetch-portfolio-content.cjs",
+    "fetch-aboutme": "node tasks/fetch-aboutme-content.cjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^1.0.0-next.31",

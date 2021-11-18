@@ -1,7 +1,7 @@
 <script>
   import portfolio from '$data/portfolio.json';
 
-  export let projects = portfolio;
+  const colors = ['red', 'green', 'blue', 'yellow'];
 </script>
 
 <style>
@@ -20,6 +20,48 @@
     font-weight: 300;
     display: block;
     max-width: 30em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 0.19em solid #ffffff00;
+    border-bottom: 0.19em solid #333333;
+    transition: 0.2s;
+  }
+
+  li:hover {
+    border-color: #666666;
+    border-radius: 3px;
+  }
+
+  li.red {
+    border-bottom: 0.19em solid #df9a8b;
+  }
+
+  li.red:hover {
+    border-color: #f0ba8f;
+  }
+
+  li.green {
+    border-bottom: 0.19em solid #78a583;
+  }
+
+  li.green:hover {
+    border-color: #9fc79e;
+  }
+
+  li.blue {
+    border-bottom: 0.19em solid #666da3;
+  }
+
+  li.blue:hover {
+    border-color: #8aacc3;
+  }
+
+  li.yellow {
+    border-bottom: 0.19em solid #dad372;
+  }
+
+  li.yellow:hover {
+    border-color: #e7d88d;
   }
 
   a {
@@ -31,12 +73,6 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.1em solid #ffffff00;
-    transition: 0.2s;
-  }
-
-  a:hover {
-    border-bottom: 0.1em solid #dad372;
   }
 
   a span {
@@ -51,7 +87,7 @@
 </style>
 
 <ul>
-  {#each projects as project}
-    <li><a href={`/portfolio/${project.slug}/`}><span>{project.entry.title}</span><img src={project.entry.thumbnail.url} alt={project.entry.thumbnail.alt} /></a></li>
+  {#each portfolio as project, index}
+    <li class={colors[index % colors.length]}><a href={`/portfolio/${project.slug}/`}><span>{project.entry.title}</span><img src={project.entry.thumbnail.url} alt={project.entry.thumbnail.alt} /></a></li>
   {/each}
 </ul>
