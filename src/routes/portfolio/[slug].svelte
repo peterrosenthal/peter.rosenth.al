@@ -23,7 +23,7 @@
 </script>
 
 <style>
-  div {
+  .wrapper {
     font-family: 'Lato', sans-serif;
     width: 90%;
     max-width: 72em;
@@ -57,6 +57,23 @@
     border-radius: 3px;
   }
 
+  .videowrapper {
+    position: relative;
+    width: 1280px;
+    max-width: 80%;
+    padding-bottom: 46.25%;
+    margin: 1em;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+  }
+
   a {
     display: block;
     margin: 1em;
@@ -73,7 +90,7 @@
   }
 </style>
 
-<div>
+<div class='wrapper'>
 <h1>{entry.title}</h1>
   {#each entry.contents as item}
     {#if item.type === 'image'}
@@ -90,6 +107,10 @@
           <li>{li}</li>
         {/each}
       </ul>
+    {:else if item.type === 'video'}
+      <div class='videowrapper'>
+        <iframe src={item.url} title='Video Player' frameborder='0' allow='accelerometer; encrypt-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+      </div>
     {/if}
   {/each}
 </div>
