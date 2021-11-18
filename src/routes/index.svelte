@@ -4,7 +4,7 @@
 
 <style>
   main {
-    widows: 100%;
+    width: 100%;
     height: 85vh;
     display: flex;
     flex-flow: column;
@@ -13,7 +13,7 @@
   }
 
   h1 {
-    margin: 0;
+    margin: 1em 0;
     text-align: center;
     width: 85%;
     max-width: 28em;
