@@ -32,25 +32,25 @@
   }
 
   #portfolio {
-    color: #dc907f;
+    color: #78a583;
     border-bottom: 0.1em solid #ffffff00;
     transition: 0.2s;
   }
 
   #portfolio:hover {
-    color: #df9a8b;
-    border-bottom: 0.1em solid #df9a8b;
+    color: #9fc79e;
+    border-bottom: 0.1em solid #9fc79e;
   }
 
   #me {
-    color: #565d8f;
+    color: #666da3;
     border-bottom: 0.1em solid #ffffff00;
     transition: 0.2s;
   }
 
   #me:hover {
-    color: #aeeae3;
-    border-bottom: 0.1em solid #aeeae3;
+    color: #8aacc3;
+    border-bottom: 0.1em solid #8aacc3;
   }
 </style>
 
