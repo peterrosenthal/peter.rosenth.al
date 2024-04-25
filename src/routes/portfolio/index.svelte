@@ -70,13 +70,10 @@
     text-decoration: none;
     color: black;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-  }
-
-  a span {
-    flex: 1 2 5em;
+    width: 13em;
   }
 
   a img {
