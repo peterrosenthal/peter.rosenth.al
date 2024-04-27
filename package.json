@@ -21,5 +21,8 @@
   "type": "module",
   "kitprops": {
     "subdirectory": ""
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.2.2"
   }
 }
