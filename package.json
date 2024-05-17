@@ -1,6 +1,6 @@
 {
 	"name": "peter.rosenth.al",
-	"version": "5.0.0",
+	"version": "5.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -12,7 +12,9 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"fetch-portfolio": "node tasks/fetch-portfolio-content.cjs",
+		"fetch-aboutme": "node tasks/fetch-aboutme-content.cjs"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -22,6 +24,7 @@
 		"@types/eslint": "^8.56.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
+		"archieml": "^0.5.0",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0-next.4",
