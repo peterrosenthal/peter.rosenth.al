@@ -72,6 +72,19 @@
     --blue-90: #457392;
     --blue-100: #3C6580;
   }
+
+  :global(html) {
+    margin: 0;
+    padding: 0;
+  }
+
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-10);
+    color: var(--base-100);
+    font-family: 'Poppins', sans-serif;
+  }
 </style>
 
 <slot></slot>
