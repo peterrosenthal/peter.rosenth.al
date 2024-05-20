@@ -1,9 +1,3 @@
-<script>
-  import aboutme from '$data/aboutme.json';
-
-  console.log(aboutme);
-</script>
-
 <style>
   .main {
     width: 90%;
@@ -48,6 +42,69 @@
       width: 12rem;
     }
   }
+
+  .nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 4rem;
+    margin-block-start: 2rem;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: var(--baseline-90);
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-style: solid;
+    border-width: 0.25rem;
+    border-radius: 0.5rem;
+    transition: all ease-in-out 200ms;
+  }
+
+  .portfolio-link {
+    border-color: var(--green-60);
+  }
+
+  .portfolio-link:hover,
+  .portfolio-link:focus-visible {
+    background-color: var(--green-0);
+  }
+
+  .me-link {
+    border-color: var(--blue-60);
+  }
+
+  .me-link:hover,
+  .me-link:focus-visible {
+    background-color: var(--blue-0);
+  }
+
+  .externals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
+
+  .externals a {
+    color: var(--blue-100);
+  }
+
+  .externals a:hover,
+  .externals a:focus-visible,
+  .externals a:visited {
+    color: var(--blue-90);
+  }
+
+  .externals a:visited:hover,
+  .externals a:focus-visible {
+    color: var(--blue-80);
+  }
 </style>
 
 <div class='main'>
@@ -59,8 +116,8 @@
     <h2>I'm Peter Rosenthal, a creative software developer and designer.</h2>
 
     <div class='nav'>
-      <a href='/portfolio'>View my portfolio</a>
-      <a href='/me'>Find out more about me</a>
+      <a href='/portfolio' class='portfolio-link'>View my portfolio</a>
+      <a href='/me' class='me-link'>Find out more about me</a>
     </div>
   </div>
 
