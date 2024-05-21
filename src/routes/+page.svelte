@@ -1,3 +1,8 @@
+<script>
+	import GitHubIcon from '$lib/GitHubIcon.svelte';
+	import LinkedInIcon from '$lib/LinkedInIcon.svelte';
+</script>
+
 <style>
   .main {
     width: 90%;
@@ -55,7 +60,7 @@
 
   .nav a {
     text-decoration: none;
-    color: var(--baseline-90);
+    color: var(--base-90);
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;
@@ -90,21 +95,6 @@
     row-gap: 0.5rem;
     column-gap: 0.5rem;
   }
-
-  .externals a {
-    color: var(--blue-100);
-  }
-
-  .externals a:hover,
-  .externals a:focus-visible,
-  .externals a:visited {
-    color: var(--blue-90);
-  }
-
-  .externals a:visited:hover,
-  .externals a:focus-visible {
-    color: var(--blue-80);
-  }
 </style>
 
 <div class='main'>
@@ -122,7 +112,7 @@
   </div>
 
   <div class='externals'>
-    <a href='https://github.com/peterrosenthal' target='_blank'>GitHub</a>
-    <a href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/' target='_blank'>LinkedIn</a>
+    <a href='https://github.com/peterrosenthal' target='_blank'><GitHubIcon /></a>
+    <a href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/' target='_blank'><LinkedInIcon /></a>
   </div>
 </div>
