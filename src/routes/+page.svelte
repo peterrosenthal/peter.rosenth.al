@@ -1,12 +1,6 @@
-<script>
-	import GitHubIcon from '$lib/GitHubIcon.svelte';
-	import LinkedInIcon from '$lib/LinkedInIcon.svelte';
-</script>
-
 <style>
   .main {
-    width: 90%;
-    max-width: 65rem;
+    width: 100%;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -17,7 +11,8 @@
   }
 
   .container {
-    width: 100%;
+    width: 90%;
+    max-width: 65rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
@@ -36,7 +31,7 @@
     padding: 0;
   }
 
-  img {
+  .logo {
     align-self: start;
     width: 25rem;
     margin-bottom: -15rem;
@@ -88,17 +83,33 @@
   }
 
   .externals {
+    align-self: flex-end;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
+    font-size: 0.75rem;
+    padding-block-end: 0.5rem;
+    padding-inline-end: 0.5rem;
+  }
+
+  .externals a {
+    width: 1.25rem;
+    height: 1.25rem;
+    box-sizing: border-box;
+
+    color: var(--base-80);
+  }
+
+  .externals img {
+    width: 100%;
   }
 </style>
 
 <div class='main'>
-  <img src='/logo.svg' alt='Peter Rosenthal' />
+  <img class='logo' src='/logo.svg' alt='Peter Rosenthal' />
 
   <div class='container'>
     <h1>Hello! 👋</h1>
@@ -112,7 +123,8 @@
   </div>
 
   <div class='externals'>
-    <a href='https://github.com/peterrosenthal' target='_blank'><GitHubIcon /></a>
-    <a href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/' target='_blank'><LinkedInIcon /></a>
+    psst... you can also find me on:
+    <a href='https://github.com/peterrosenthal' target='_blank'><img src='/github.svg' alt='GitHub' /></a>
+    <a href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/' target='_blank'><img src='/linkedin.svg' alt='LinkedIn' /></a>
   </div>
 </div>
