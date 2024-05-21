@@ -87,4 +87,8 @@
   }
 </style>
 
+<svelte:head>
+  <title>Peter Rosenthal</title>
+</svelte:head>
+
 <slot></slot>
