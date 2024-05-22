@@ -20,6 +20,13 @@
     justify-content: space-between;
   }
 
+  .floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   img {
     align-self: start;
     width: 10rem;
@@ -75,25 +82,27 @@
   }
 </style>
 
-<nav>
-  {#if page === 'home'}
-    <img src="/logo.svg" alt="Peter Rosenthal" />
-  {:else}
-    <a href="/">
-      <img src="/logo.svg" alt="Peter Rosenthal - Home" />
+{#if page === 'home'}
+  <nav>
+    <img src='/logo.svg' alt='Peter Rosenthal' />
+  </nav>
+{:else}
+  <nav class='floating'>
+    <a href='/'>
+      <img src='/logo.svg' alt='Peter Rosenthal - Home' />
     </a>
 
-    <div class="group">
+    <div class='group'>
       <a
-        href="/portfolio"
+        href='/portfolio'
         class={classNames('portfolio-link', { selected: page === 'portfolio' })}
       >
         Portfolio
       </a>
 
-      <a href="/me" class={classNames('me-link', { selected: page === 'me' })}>
+      <a href='/me' class={classNames('me-link', { selected: page === 'me' })}>
         About me
       </a>
     </div>
-  {/if}
-</nav>
+  </nav>
+{/if}
