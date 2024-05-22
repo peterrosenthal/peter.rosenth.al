@@ -31,7 +31,8 @@
     color: var(--base-80);
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: var(--base-100);
@@ -113,7 +114,8 @@
       margin-block-start: 12rem;
     }
 
-    .image, .videowrapper {
+    .image,
+    .videowrapper {
       max-width: 98%;
     }
   }

@@ -123,12 +123,17 @@
     <div class="group">
       <a
         href="/portfolio"
-        class={classNames('portfolio-link', { selected: active === 'portfolio' })}
+        class={classNames('portfolio-link', {
+          selected: active === 'portfolio',
+        })}
       >
         Portfolio
       </a>
 
-      <a href="/me" class={classNames('me-link', { selected: active === 'me' })}>
+      <a
+        href="/me"
+        class={classNames('me-link', { selected: active === 'me' })}
+      >
         About me
       </a>
     </div>
