@@ -42,7 +42,7 @@
 
   .group a {
     text-decoration: none;
-    color: var(--baseline-90);
+    color: var(--base-90);
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;

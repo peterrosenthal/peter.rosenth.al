@@ -21,13 +21,13 @@
     font-size: 3rem;
     margin: 0;
     padding: 0;
-    color: var(--baseline-80);
+    color: var(--base-80);
   }
 
   p {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    color: var(--baseline-100);
+    color: var(--base-100);
   }
 </style>
 
