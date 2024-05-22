@@ -100,23 +100,28 @@
   }
 </style>
 
-<div class='main'>
-  <Nav page='home' />
+<div class="main">
+  <Nav page="home" />
 
-  <div class='container'>
+  <div class="container">
     <h1>Hello! 👋</h1>
 
     <h2>I'm Peter Rosenthal, a creative software developer and designer.</h2>
 
-    <div class='internals'>
-      <a href='/portfolio' class='portfolio-link'>View my portfolio</a>
-      <a href='/me' class='me-link'>Find out more about me</a>
+    <div class="internals">
+      <a href="/portfolio" class="portfolio-link">View my portfolio</a>
+      <a href="/me" class="me-link">Find out more about me</a>
     </div>
   </div>
 
-  <div class='externals'>
+  <div class="externals">
     psst... you can also find me on:
-    <a href='https://github.com/peterrosenthal' target='_blank'><img src='/github.svg' alt='GitHub' /></a>
-    <a href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/' target='_blank'><img src='/linkedin.svg' alt='LinkedIn' /></a>
+    <a href="https://github.com/peterrosenthal" target="_blank"
+      ><img src="/github.svg" alt="GitHub" /></a
+    >
+    <a
+      href="https://www.linkedin.com/in/peter-rosenthal-0362b51bb/"
+      target="_blank"><img src="/linkedin.svg" alt="LinkedIn" /></a
+    >
   </div>
 </div>

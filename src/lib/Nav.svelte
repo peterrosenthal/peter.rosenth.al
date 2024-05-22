@@ -2,9 +2,6 @@
   import classNames from 'classnames';
 
   let { page } = $props();
-
-  let portfolioClasses = $derived(classNames('portfolio-link', { 'selected': page === 'portfolio' }));
-  let meClasses = $derived(classNames('me-link', { 'selected': page === 'me'}));
 </script>
 
 <style>
@@ -80,15 +77,23 @@
 
 <nav>
   {#if page === 'home'}
-    <img src='/logo.svg' alt='Peter Rosenthal' />
+    <img src="/logo.svg" alt="Peter Rosenthal" />
   {:else}
-    <a href='/'>
-      <img src='/logo.svg' alt='Peter Rosenthal - Home' />
+    <a href="/">
+      <img src="/logo.svg" alt="Peter Rosenthal - Home" />
     </a>
 
-    <div class='group'>
-      <a href='/portfolio' class={portfolioClasses}>Portfolio</a>
-      <a href='/me' class={meClasses}>About me</a>
+    <div class="group">
+      <a
+        href="/portfolio"
+        class={classNames('portfolio-link', { selected: page === 'portfolio' })}
+      >
+        Portfolio
+      </a>
+
+      <a href="/me" class={classNames('me-link', { selected: page === 'me' })}>
+        About me
+      </a>
     </div>
   {/if}
 </nav>
