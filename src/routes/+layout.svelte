@@ -1,6 +1,11 @@
 <script>
-    import Nav from '$lib/Nav.svelte';
+  import { dev } from '$app/environment';
+  import { inject } from '@vercel/analytics';
+  import Nav from '$lib/Nav.svelte';
+
+  inject({ mode: dev ? 'development' : 'production' });
 </script>
+
 <style>
   :root {
     --base-0: #fbfaf9;
