@@ -1,7 +1,16 @@
 <script>
   import classNames from 'classnames';
+  import { page } from '$app/stores';
 
-  let { page } = $props();
+  let active = $derived.by(() => {
+    if ($page.url.pathname.includes('portfolio')) {
+      return 'portfolio';
+    }
+    if ($page.url.pathname.includes('me')) {
+      return 'me';
+    }
+    return 'home';
+  });
 </script>
 
 <style>
@@ -18,9 +27,7 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-  }
 
-  .floating {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,29 +87,50 @@
   .me-link.selected:focus-visible {
     background-color: var(--blue-10);
   }
+
+  @media (width < 500px) {
+    nav:not(:has(> *:only-child)) {
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: start;
+      height: 10rem;
+    }
+
+    .group {
+      justify-content: space-evenly;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  @media (width < 300px) {
+    .group a {
+      font-size: 0.75rem;
+      padding-inline: 0.5rem;
+      padding-block: 0.25rem;
+    }
+  }
 </style>
 
-{#if page === 'home'}
-  <nav>
-    <img src='/logo.svg' alt='Peter Rosenthal' />
-  </nav>
-{:else}
-  <nav class='floating'>
-    <a href='/'>
-      <img src='/logo.svg' alt='Peter Rosenthal - Home' />
+<nav>
+  {#if active === 'home'}
+    <img src="/logo.svg" alt="Peter Rosenthal" />
+  {:else}
+    <a href="/">
+      <img src="/logo.svg" alt="Peter Rosenthal - Home" />
     </a>
 
-    <div class='group'>
+    <div class="group">
       <a
-        href='/portfolio'
-        class={classNames('portfolio-link', { selected: page === 'portfolio' })}
+        href="/portfolio"
+        class={classNames('portfolio-link', { selected: active === 'portfolio' })}
       >
         Portfolio
       </a>
 
-      <a href='/me' class={classNames('me-link', { selected: page === 'me' })}>
+      <a href="/me" class={classNames('me-link', { selected: active === 'me' })}>
         About me
       </a>
     </div>
-  </nav>
-{/if}
+  {/if}
+</nav>

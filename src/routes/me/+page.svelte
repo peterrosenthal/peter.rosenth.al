@@ -1,5 +1,4 @@
 <script>
-  import Nav from '$lib/Nav.svelte';
   import aboutme from '$data/aboutme.json';
 </script>
 
@@ -29,9 +28,13 @@
     line-height: 1.5rem;
     color: var(--base-100);
   }
-</style>
 
-<Nav page='me' />
+  @media (width < 500px) {
+    .container {
+      margin-block-start: 12rem;
+    }
+  }
+</style>
 
 <div class='container'>
   <h1>{aboutme.title}</h1>

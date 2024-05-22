@@ -1,3 +1,6 @@
+<script>
+    import Nav from '$lib/Nav.svelte';
+</script>
 <style>
   :root {
     --base-0: #fbfaf9;
@@ -90,5 +93,7 @@
 <svelte:head>
   <title>Peter Rosenthal</title>
 </svelte:head>
+
+<Nav />
 
 <slot></slot>

@@ -1,25 +1,15 @@
-<script>
-  import Nav from '$lib/Nav.svelte';
-</script>
-
 <style>
   .main {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  .container {
     width: 90%;
     max-width: 65rem;
+    min-height: calc(100vh - 1.75rem);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-block-start: 8rem;
+    padding-block-end: 2rem;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
   }
 
@@ -75,16 +65,17 @@
   }
 
   .externals {
-    align-self: flex-end;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
     font-size: 0.75rem;
     padding-block-end: 0.5rem;
     padding-inline-end: 0.5rem;
+    box-sizing: border-box;
+    height: 1.75rem;
   }
 
   .externals a {
@@ -100,28 +91,24 @@
   }
 </style>
 
-<div class='main'>
-  <Nav page='home' />
+<div class="main">
+  <h1>Hello! 👋</h1>
 
-  <div class='container'>
-    <h1>Hello! 👋</h1>
+  <h2>I'm Peter Rosenthal, a creative software developer and designer.</h2>
 
-    <h2>I'm Peter Rosenthal, a creative software developer and designer.</h2>
-
-    <div class='internals'>
-      <a href='/portfolio' class='portfolio-link'>View my portfolio</a>
-      <a href='/me' class='me-link'>Find out more about me</a>
-    </div>
+  <div class="internals">
+    <a href="/portfolio" class="portfolio-link">View my portfolio</a>
+    <a href="/me" class="me-link">Find out more about me</a>
   </div>
+</div>
 
-  <div class='externals'>
-    psst... you can also find me on:
-    <a href='https://github.com/peterrosenthal' target='_blank'
-      ><img src='/github.svg' alt='GitHub' /></a
-    >
-    <a
-      href='https://www.linkedin.com/in/peter-rosenthal-0362b51bb/'
-      target='_blank'><img src='/linkedin.svg' alt='LinkedIn' /></a
-    >
-  </div>
+<div class="externals">
+  psst... you can also find me on:
+  <a href="https://github.com/peterrosenthal" target="_blank"
+    ><img src="/github.svg" alt="GitHub" /></a
+  >
+  <a
+    href="https://www.linkedin.com/in/peter-rosenthal-0362b51bb/"
+    target="_blank"><img src="/linkedin.svg" alt="LinkedIn" /></a
+  >
 </div>

@@ -1,5 +1,4 @@
 <script>
-  import Nav from '$lib/Nav.svelte';
   import portfolio from '$data/portfolio.json';
 </script>
 
@@ -51,9 +50,13 @@
     max-width: 100%;
     border-radius: 1.75rem;
   }
-</style>
 
-<Nav page='portfolio' />
+  @media (width < 500px) {
+    .container {
+      margin-block-start: 12rem;
+    }
+  }
+</style>
 
 <div class='container'>
   {#each portfolio as project}
