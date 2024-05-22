@@ -1,9 +1,11 @@
 <script>
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
+  import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
   import Nav from '$lib/Nav.svelte';
 
   inject({ mode: dev ? 'development' : 'production' });
+  injectSpeedInsights();
 </script>
 
 <style>
