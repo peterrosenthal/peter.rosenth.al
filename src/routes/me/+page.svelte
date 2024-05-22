@@ -6,14 +6,14 @@
   .container {
     width: 90%;
     max-width: 65rem;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 10rem);
     box-sizing: border-box;
-    margin: 8rem auto 0;
+    margin: 8rem auto 2rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   h1 {
@@ -27,6 +27,8 @@
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: var(--base-100);
+    font-weight: 300;
+    margin: 0;
   }
 
   @media (width < 500px) {
@@ -36,7 +38,7 @@
   }
 </style>
 
-<div class='container'>
+<div class="container">
   <h1>{aboutme.title}</h1>
 
   {#each aboutme.paragraphs as paragraph}

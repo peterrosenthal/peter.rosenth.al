@@ -4,7 +4,7 @@
 
 <style>
   .container {
-    width: 90%;
+    width: 90vw;
     max-width: 65rem;
     min-height: calc(100vh - 10rem);
     box-sizing: border-box;
@@ -25,15 +25,15 @@
     color: var(--base-90);
     background-color: var(--base-0);
     padding: 1rem;
-    padding-block-start: 0.5rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: center;
     gap: 0.25rem;
+    box-shadow: 0 0 2rem #0000000b;
   }
   .project:hover {
-    box-shadow: 0 0 2rem #0000000d;
+    box-shadow: 0 0 2rem #0000001d;
   }
 
   .project-title {
@@ -58,11 +58,15 @@
   }
 </style>
 
-<div class='container'>
+<div class="container">
   {#each portfolio as project}
-    <a href={`/portfolio/${project.slug}`} class='project' >
-      <span class='project-title'>{project.entry.title}</span>
-      <img src={project.entry.thumbnail.url} alt={project.entry.thumbnail.alt} class='thumbnail' />
+    <a href={`/portfolio/${project.slug}`} class="project">
+      <span class="project-title">{project.entry.title}</span>
+      <img
+        src={project.entry.thumbnail.url}
+        alt={project.entry.thumbnail.alt}
+        class="thumbnail"
+      />
     </a>
   {/each}
 </div>
