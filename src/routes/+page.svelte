@@ -1,3 +1,7 @@
+<script>
+  import Nav from '$lib/Nav.svelte';
+</script>
+
 <style>
   .main {
     width: 100%;
@@ -31,19 +35,7 @@
     padding: 0;
   }
 
-  .logo {
-    align-self: start;
-    width: 25rem;
-    margin-bottom: -15rem;
-  }
-
-  @media (height < 600px) {
-    img {
-      width: 12rem;
-    }
-  }
-
-  .nav {
+  .internals {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -53,14 +45,14 @@
     margin-block-start: 2rem;
   }
 
-  .nav a {
+  .internals a {
     text-decoration: none;
     color: var(--base-90);
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;
     border-width: 0.25rem;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     transition: all ease-in-out 200ms;
   }
 
@@ -109,14 +101,14 @@
 </style>
 
 <div class='main'>
-  <img class='logo' src='/logo.svg' alt='Peter Rosenthal' />
+  <Nav page='home' />
 
   <div class='container'>
     <h1>Hello! 👋</h1>
 
     <h2>I'm Peter Rosenthal, a creative software developer and designer.</h2>
 
-    <div class='nav'>
+    <div class='internals'>
       <a href='/portfolio' class='portfolio-link'>View my portfolio</a>
       <a href='/me' class='me-link'>Find out more about me</a>
     </div>
