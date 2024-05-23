@@ -20,7 +20,7 @@
     font-size: 3rem;
     margin: 0;
     padding: 0;
-    color: var(--base-80);
+    color: light-dark(var(--base-80), var(--base-20));
   }
 
   h2 {
@@ -28,14 +28,14 @@
     margin: 0;
     padding: 0;
     margin-block-end: -1.5rem;
-    color: var(--base-80);
+    color: light-dark(var(--base-80), var(--base-20));
   }
 
   p,
   li {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    color: var(--base-100);
+    color: light-dark(var(--base-100), var(--base-10));
     font-weight: 300;
     margin: 0;
   }
@@ -73,21 +73,21 @@
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--blue-100);
+    color: light-dark(var(--blue-100), var(--blue-50));
     border-bottom: 0.25rem solid #00000000;
     transition: all ease-in-out 200ms;
   }
 
   .link:hover,
   .link:focus-visible {
-    color: var(--blue-90);
-    border-bottom-color: var(--blue-90);
+    color: light-dark(var(--blue-90), var(--blue-40));
+    border-bottom-color: light-dark(var(--blue-90), var(--blue-40));
   }
 
   .back {
     align-self: flex-start;
     font-size: 0.75rem;
-    color: var(--base-80);
+    color: light-dark(var(--base-80), var(--base-20));
     display: flex;
     flex-flow: row nowrap;
     gap: 0.25rem;
@@ -100,8 +100,8 @@
 
   .back:hover,
   .back:focus-visible {
-    color: var(--base-70);
-    border-bottom-color: var(--base-40);
+    color: light-dark(var(--base-70), var(--base-30));
+    border-bottom-color: light-dark(var(--base-40), var(--base-50));
   }
 
   .back img {

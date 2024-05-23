@@ -20,8 +20,8 @@
     padding-inline: 2rem;
     box-sizing: border-box;
 
-    background-color: var(--base-10);
-    box-shadow: 0 0.5rem 4rem #00000010;
+    background-color: light-dark(var(--base-10), var(--base-90));
+    box-shadow: 0 0.5rem 4rem light-dark(#00000010, #ccd5db10);
 
     display: flex;
     flex-flow: row nowrap;
@@ -49,7 +49,7 @@
 
   .group a {
     text-decoration: none;
-    color: var(--base-90);
+    color: light-dark(var(--base-90), var(--base-10)),;
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;
@@ -59,33 +59,33 @@
   }
 
   .portfolio-link {
-    border-color: var(--green-60);
+    border-color: light-dark(var(--green-60), var(--green-50));
   }
 
   .portfolio-link:hover,
   .portfolio-link:focus-visible,
   .portfolio-link.selected {
-    background-color: var(--green-0);
+    background-color: light-dark(var(--green-0), var(--green-90));
   }
 
   .portfolio-link.selected:hover,
   .portfolio-link.selected:focus-visible {
-    background-color: var(--green-10);
+    background-color: light-dark(var(--green-10), var(--green-100));
   }
 
   .me-link {
-    border-color: var(--blue-60);
+    border-color: light-dark(var(--blue-60), var(--blue-50));
   }
 
   .me-link:hover,
   .me-link:focus-visible,
   .me-link.selected {
-    background-color: var(--blue-0);
+    background-color: light-dark(var(--blue-0), var(--blue-90));
   }
 
   .me-link.selected:hover,
   .me-link.selected:focus-visible {
-    background-color: var(--blue-10);
+    background-color: light-dark(var(--blue-10), var(--blue-100));
   }
 
   @media (width < 500px) {

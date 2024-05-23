@@ -1,6 +1,6 @@
 {
 	"name": "peter.rosenth.al",
-	"version": "5.0.1",
+	"version": "5.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
