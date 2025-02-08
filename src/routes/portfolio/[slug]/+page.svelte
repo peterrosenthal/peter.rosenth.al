@@ -51,7 +51,7 @@
     align-self: center;
     max-width: 80%;
     max-height: 80vh;
-    border-radius: 32px;
+    border-radius: 16px;
   }
 
   .videowrapper {
@@ -69,7 +69,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 32px;
+    border-radius: 16px;
   }
 
   .link {
