@@ -20,13 +20,13 @@
     font-size: 3rem;
     margin: 0;
     padding: 0;
-    color: var(--base-80);
+    color: light-dark(var(--base-80), var(--base-20));
   }
 
   p {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    color: var(--base-100);
+    color: light-dark(var(--base-100), var(--base-10));
     font-weight: 300;
     margin: 0;
   }

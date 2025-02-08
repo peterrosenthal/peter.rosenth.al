@@ -22,18 +22,18 @@
     border-radius: 2rem;
     transition: all ease-in-out 200ms;
     text-decoration: none;
-    color: var(--base-90);
-    background-color: var(--base-0);
+    color: light-dark(var(--base-90), var(--base-10));
+    background-color: light-dark(var(--base-0), var(--base-100));
     padding: 1rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: center;
     gap: 0.25rem;
-    box-shadow: 0 0 2rem #0000000b;
+    box-shadow: 0 0 2rem light-dark(#0000000b, #ccd5db03);
   }
   .project:hover {
-    box-shadow: 0 0 2rem #0000001d;
+    box-shadow: 0 0 2rem light-dark(#0000001d, #ccd5db0d);
   }
 
   .project-title {

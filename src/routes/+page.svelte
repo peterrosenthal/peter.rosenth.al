@@ -1,3 +1,8 @@
+<script>
+  import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
+  import LinkedInIcon from '$lib/icons/LinkedInIcon.svelte';
+</script>
+
 <style>
   .main {
     width: 90%;
@@ -37,7 +42,7 @@
 
   .internals a {
     text-decoration: none;
-    color: var(--base-90);
+    color: light-dark(var(--base-90), var(--base-10));
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;
@@ -47,21 +52,21 @@
   }
 
   .portfolio-link {
-    border-color: var(--green-60);
+    border-color: light-dark(var(--green-60), var(--green-50));
   }
 
   .portfolio-link:hover,
   .portfolio-link:focus-visible {
-    background-color: var(--green-0);
+    background-color: light-dark(var(--green-0), var(--green-90));
   }
 
   .me-link {
-    border-color: var(--blue-60);
+    border-color: light-dark(var(--blue-60), var(--blue-50));
   }
 
   .me-link:hover,
   .me-link:focus-visible {
-    background-color: var(--blue-0);
+    background-color: light-dark(var(--blue-0), var(--blue-90));
   }
 
   .externals {
@@ -83,11 +88,7 @@
     height: 1.25rem;
     box-sizing: border-box;
 
-    color: var(--base-80);
-  }
-
-  .externals img {
-    width: 100%;
+    color: light-dark(var(--base-80), var(--base-20));
   }
 </style>
 
@@ -104,11 +105,9 @@
 
 <div class="externals">
   psst... you can also find me on:
-  <a href="https://github.com/peterrosenthal" target="_blank"
-    ><img src="/github.svg" alt="GitHub" /></a
-  >
+  <a href="https://github.com/peterrosenthal" target="_blank"><GitHubIcon /></a>
   <a
     href="https://www.linkedin.com/in/peter-rosenthal-0362b51bb/"
-    target="_blank"><img src="/linkedin.svg" alt="LinkedIn" /></a
+    target="_blank"><LinkedInIcon /></a
   >
 </div>

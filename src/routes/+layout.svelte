@@ -10,6 +10,8 @@
 
 <style>
   :root {
+    color-scheme: light dark;
+
     --base-0: #fbfaf9;
     --base-10: #f2f0ed;
     --base-20: #e2dfd9;
@@ -91,8 +93,8 @@
   :global(body) {
     margin: 0;
     padding: 0;
-    background-color: var(--base-10);
-    color: var(--base-100);
+    background-color: light-dark(var(--base-10), var(--base-90));
+    color: light-dark(var(--base-100), var(--base-0));
     font-family: 'Poppins', sans-serif;
   }
 </style>
