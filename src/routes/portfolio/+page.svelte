@@ -5,35 +5,35 @@
 <style>
   .container {
     width: 90vw;
-    max-width: 65rem;
-    min-height: calc(100vh - 10rem);
+    max-width: 1040px;
+    min-height: calc(100vh - 160px);
     box-sizing: border-box;
-    margin: 8rem auto 2rem;
+    margin: 128px auto 32px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
-    gap: 2rem;
+    gap: 32px;
   }
 
   .project {
     box-sizing: border-box;
-    width: 13rem;
-    border-radius: 2rem;
+    width: 200px;
+    border-radius: 32px;
     transition: all ease-in-out 200ms;
     text-decoration: none;
     color: light-dark(var(--base-90), var(--base-10));
     background-color: light-dark(var(--base-0), var(--base-100));
-    padding: 1rem;
+    padding: 16px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: center;
-    gap: 0.25rem;
-    box-shadow: 0 0 2rem light-dark(#0000000b, #ccd5db03);
+    gap: 4px;
+    box-shadow: 0 0 32px light-dark(#0000000b, #ccd5db03);
   }
   .project:hover {
-    box-shadow: 0 0 2rem light-dark(#0000001d, #ccd5db0d);
+    box-shadow: 0 0 32px light-dark(#0000001d, #ccd5db0d);
   }
 
   .project-title {
@@ -48,12 +48,12 @@
   .thumbnail {
     aspect-ratio: 1 / 1;
     max-width: 100%;
-    border-radius: 1.75rem;
+    border-radius: 24px;
   }
 
   @media (width < 500px) {
     .container {
-      margin-block-start: 12rem;
+      margin-block-start: 192px;
     }
   }
 </style>
