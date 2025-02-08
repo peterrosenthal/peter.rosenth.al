@@ -1,3 +1,8 @@
+<script>
+  import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
+  import LinkedInIcon from '$lib/icons/LinkedInIcon.svelte';
+</script>
+
 <style>
   .main {
     width: 90%;
@@ -85,10 +90,6 @@
 
     color: light-dark(var(--base-80), var(--base-20));
   }
-
-  .externals img {
-    width: 100%;
-  }
 </style>
 
 <div class="main">
@@ -104,11 +105,9 @@
 
 <div class="externals">
   psst... you can also find me on:
-  <a href="https://github.com/peterrosenthal" target="_blank"
-    ><img src="/github.svg" alt="GitHub" /></a
-  >
+  <a href="https://github.com/peterrosenthal" target="_blank"><GitHubIcon /></a>
   <a
     href="https://www.linkedin.com/in/peter-rosenthal-0362b51bb/"
-    target="_blank"><img src="/linkedin.svg" alt="LinkedIn" /></a
+    target="_blank"><LinkedInIcon /></a
   >
 </div>

@@ -1,4 +1,6 @@
 <script>
+  import BackIcon from '$lib/icons/BackIcon.svelte';
+
   let { data } = $props();
 </script>
 
@@ -45,6 +47,7 @@
   }
 
   .image {
+    box-sizing: border-box;
     align-self: center;
     max-width: 80%;
     max-height: 80vh;
@@ -105,11 +108,6 @@
     border-bottom-color: light-dark(var(--base-40), var(--base-50));
   }
 
-  .back img {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
-
   @media (width < 500px) {
     .container {
       margin-block-start: 12rem;
@@ -124,7 +122,7 @@
 
 <div class="container">
   <a class="back" href="/portfolio">
-    <img src="/back.svg" alt="" />
+    <BackIcon />
     View all projects
   </a>
   <h1>{data.title}</h1>

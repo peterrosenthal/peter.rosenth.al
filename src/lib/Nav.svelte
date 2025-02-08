@@ -49,7 +49,7 @@
 
   .group a {
     text-decoration: none;
-    color: light-dark(var(--base-90), var(--base-10)),;
+    color: light-dark(var(--base-90), var(--base-10));
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-style: solid;
