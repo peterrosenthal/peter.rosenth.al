@@ -6,12 +6,12 @@
 <style>
   .main {
     width: 90%;
-    max-width: 65rem;
-    min-height: calc(100vh - 1.75rem);
+    max-width: 1040px;
+    min-height: calc(100vh - 28px);
     box-sizing: border-box;
     margin: 0 auto;
-    padding-block-start: 8rem;
-    padding-block-end: 2rem;
+    padding-block-start: 128px;
+    padding-block-end: 32px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -35,19 +35,19 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 4rem;
-    margin-block-start: 2rem;
+    row-gap: 8px;
+    column-gap: 64px;
+    margin-block-start: 32px;
   }
 
   .internals a {
     text-decoration: none;
     color: light-dark(var(--base-90), var(--base-10));
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-inline: 16px;
+    padding-block: 8px;
     border-style: solid;
-    border-width: 0.25rem;
-    border-radius: 2rem;
+    border-width: 4px;
+    border-radius: 32px;
     transition: all ease-in-out 200ms;
   }
 
@@ -74,18 +74,18 @@
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 0.5rem;
-    font-size: 0.75rem;
-    padding-block-end: 0.5rem;
-    padding-inline-end: 0.5rem;
+    row-gap: 8px;
+    column-gap: 8px;
+    font-size: 12px;
+    padding-block-end: 8px;
+    padding-inline-end: 8px;
     box-sizing: border-box;
     height: 1.75rem;
   }
 
   .externals a {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 20px;
+    height: 20px;
     box-sizing: border-box;
 
     color: light-dark(var(--base-80), var(--base-20));

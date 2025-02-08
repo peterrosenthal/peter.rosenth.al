@@ -16,12 +16,12 @@
 <style>
   nav {
     width: 100%;
-    height: 6rem;
-    padding-inline: 2rem;
+    height: 96px;
+    padding-inline: 32px;
     box-sizing: border-box;
 
     background-color: light-dark(var(--base-10), var(--base-90));
-    box-shadow: 0 0.5rem 4rem light-dark(#00000010, #ccd5db10);
+    box-shadow: 0 0.5rem 64px light-dark(#00000010, #ccd5db10);
 
     display: flex;
     flex-flow: row nowrap;
@@ -36,7 +36,7 @@
 
   img {
     align-self: start;
-    width: 10rem;
+    width: 160px;
   }
 
   .group {
@@ -44,17 +44,17 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    column-gap: 0.5rem;
+    column-gap: 8px;
   }
 
   .group a {
     text-decoration: none;
     color: light-dark(var(--base-90), var(--base-10));
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-inline: 16px;
+    padding-block: 8px;
     border-style: solid;
-    border-width: 0.25rem;
-    border-radius: 2rem;
+    border-width: 4px;
+    border-radius: 32px;
     transition: all ease-in-out 200ms;
   }
 
@@ -93,7 +93,7 @@
       flex-flow: column nowrap;
       align-items: center;
       justify-content: start;
-      height: 10rem;
+      height: 160px;
     }
 
     .group {
@@ -106,8 +106,8 @@
   @media (width < 300px) {
     .group a {
       font-size: 0.75rem;
-      padding-inline: 0.5rem;
-      padding-block: 0.25rem;
+      padding-inline: 8px;
+      padding-block: 4px;
     }
   }
 </style>

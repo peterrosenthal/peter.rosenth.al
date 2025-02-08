@@ -7,15 +7,15 @@
 <style>
   .container {
     width: 90%;
-    max-width: 65rem;
-    min-height: calc(100vh - 8rem);
+    max-width: 1040px;
+    min-height: calc(100vh - 128px);
     box-sizing: border-box;
-    margin: 8rem auto 2rem;
+    margin: 128px auto 32px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: start;
-    gap: 2rem;
+    gap: 32px;
   }
 
   h1 {
@@ -29,7 +29,7 @@
     font-size: 2.25rem;
     margin: 0;
     padding: 0;
-    margin-block-end: -1.5rem;
+    margin-block-end: -24px;
     color: light-dark(var(--base-80), var(--base-20));
   }
 
@@ -51,7 +51,7 @@
     align-self: center;
     max-width: 80%;
     max-height: 80vh;
-    border-radius: 2rem;
+    border-radius: 16px;
   }
 
   .videowrapper {
@@ -69,7 +69,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: 2rem;
+    border-radius: 16px;
   }
 
   .link {
@@ -94,12 +94,12 @@
     color: light-dark(var(--base-80), var(--base-20));
     display: flex;
     flex-flow: row nowrap;
-    gap: 0.25rem;
+    gap: 4px;
     justify-content: start;
     align-items: center;
     text-decoration: none;
     border-bottom: 1px solid #00000000;
-    margin-block-end: -1.5rem;
+    margin-block-end: -24px;
   }
 
   .back:hover,
@@ -110,7 +110,7 @@
 
   @media (width < 500px) {
     .container {
-      margin-block-start: 12rem;
+      margin-block-start: 192px;
     }
 
     .image,
