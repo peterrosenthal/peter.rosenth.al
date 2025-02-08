@@ -47,6 +47,7 @@
   .image {
     align-self: center;
     max-width: 80%;
+    max-height: 80vh;
     border-radius: 2rem;
   }
 
