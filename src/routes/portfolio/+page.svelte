@@ -33,7 +33,7 @@
     box-shadow: 0 0 32px light-dark(#0000000b, #ccd5db03);
   }
   .project:hover {
-    box-shadow: 0 0 32px light-dark(#0000001d, #ccd5db0d);
+    box-shadow: 0 4px 32px light-dark(#00000044, #ccd5db44);
   }
 
   .project-title {
